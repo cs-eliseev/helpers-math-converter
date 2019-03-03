@@ -64,6 +64,13 @@ git clone https://github.com/cs-eliseev/helpers-math-converter.git
 
 The class consists of static methods that are conveniently used in any project. See example [examples-math-converter.php](https://github.com/cs-eliseev/helpers-math-converter/blob/master/examples/examples-math-converter.php).
 
+**Convert HEX TO BINARY**
+
+Example:
+```php
+MathConverter::hexToBin('48454c4c4f');
+// HELLO
+```
 
 ## License
 
