@@ -36,4 +36,37 @@ class TestMathConverter extends TestCase
             ],
         ];
     }
+
+
+    /**
+     * @param string $bin
+     * @param string $expected
+     *
+     * @dataProvider providerBinToHex
+     */
+    public function testBinToHex(string $bin, string $expected): void
+    {
+        $this->assertEquals($expected, MathConverter::binToHex($bin));
+    }
+
+    /**
+     * @return array
+     */
+    public function providerBinToHex(): array
+    {
+        return [
+            [
+                '@',
+                '40',
+            ],
+            [
+                '   ',
+                '202020',
+            ],
+            [
+                'HELLO',
+                '48454c4c4f',
+            ],
+        ];
+    }
 }
