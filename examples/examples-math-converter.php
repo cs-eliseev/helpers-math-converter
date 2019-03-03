@@ -9,3 +9,7 @@ use cse\helpers\MathConverter;
 var_dump(MathConverter::hexToBin('48454c4c4f'));
 echo PHP_EOL;
 
+// Example: binary to hex
+// HELLO => 48454c4c4f
+var_dump(MathConverter::binToHex('HELLO'));
+echo PHP_EOL;
