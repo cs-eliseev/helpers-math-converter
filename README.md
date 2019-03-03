@@ -72,6 +72,15 @@ MathConverter::hexToBin('48454c4c4f');
 // HELLO
 ```
 
+**Convert BINARY TO HEX**
+
+Example:
+```php
+MathConverter::binToHex('HELLO');
+// 48454c4c4f
+```
+
+
 ## License
 
 See the [LICENSE.md](https://github.com/cs-eliseev/helpers-math-converter/blob/master/LICENSE.md) file for licensing details.
