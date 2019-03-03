@@ -22,4 +22,23 @@ class MathConverter
     {
         return pack('H*' , $hex);
     }
+
+    /**
+     * Convert binary ot hex
+     *
+     * @param string $bin
+     *
+     * @return string
+     */
+    public static function binToHex(string $bin): string
+    {
+        $hex = '';
+        $i = 0;
+        do {
+            $hex .= sprintf('%02x', ord($bin{$i}));
+            $i++;
+        } while ($i < strlen($bin));
+
+        return $hex;
+    }
 }
