@@ -11,6 +11,8 @@ namespace cse\helpers;
  */
 class MathConverter
 {
+    const DEFAULT_DECIMAL = 2;
+
     /**
      * Convert hex to binary
      *
@@ -46,10 +48,24 @@ class MathConverter
      * Convert megabytes to bytes
      *
      * @param $megaBytes
+     *
      * @return mixed
      */
     public static function mbToBytes($megaBytes)
     {
         return $megaBytes * pow(1024, 2);
+    }
+
+    /**
+     * Convert bytes to megabytes
+     *
+     * @param int $bytes
+     * @param int $decimal
+     *
+     * @return float
+     */
+    public static function bytesToMb(int $bytes, int $decimal = self::DEFAULT_DECIMAL): float
+    {
+        return round($bytes / pow(1024, 2), $decimal);
     }
 }
