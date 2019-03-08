@@ -97,4 +97,40 @@ class TestMathConverter extends TestCase
             ],
         ];
     }
+
+    /**
+     * @param int $bytes
+     * @param int $decimal
+     * @param int $expired
+     *
+     * @dataProvider providerBytesToMb
+     */
+    public function testBytesToMb(int $bytes, int $decimal, int $expired): void
+    {
+        $this->assertEquals($expired, MathConverter::bytesToMb($bytes, $decimal));
+    }
+
+    /**
+     * @return array
+     */
+    public function providerBytesToMb(): array
+    {
+        return [
+            [
+                1048576,
+                MathConverter::DEFAULT_DECIMAL,
+                1,
+            ],
+            [
+                0,
+                MathConverter::DEFAULT_DECIMAL,
+                0,
+            ],
+            [
+                1000000,
+                4,
+                0.9537,
+            ]
+        ];
+    }
 }
