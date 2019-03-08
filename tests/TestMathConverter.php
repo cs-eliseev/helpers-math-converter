@@ -69,4 +69,32 @@ class TestMathConverter extends TestCase
             ],
         ];
     }
+
+    /**
+     * @param int $megabyte
+     * @param int $expired
+     *
+     * @dataProvider providerMbToBytes
+     */
+    public function testMbToBytes(int $megabyte, int $expired): void
+    {
+        $this->assertEquals($expired, MathConverter::mbToBytes($megabyte));
+    }
+
+    /**
+     * @return array
+     */
+    public function providerMbToBytes(): array
+    {
+        return [
+            [
+                1,
+                1048576,
+            ],
+            [
+                0,
+                0,
+            ],
+        ];
+    }
 }
