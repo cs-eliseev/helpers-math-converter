@@ -80,6 +80,14 @@ MathConverter::binToHex('HELLO');
 // 48454c4c4f
 ```
 
+**Convert MEGABYTES TO BYTES**
+
+Example:
+```php
+MathConverter::mbToBytes(1);
+// 1048576
+```
+
 
 ## License
 
