@@ -169,4 +169,33 @@ class TestMathConverter extends TestCase
             ],
         ];
     }
+
+
+    /**
+     * @param int $bytes
+     * @param int $decimal
+     * @param int $expired
+     *
+     * @dataProvider providerBytesToGb
+     */
+    public function testBytesToGb(int $bytes, int $decimal, int $expired)
+    {
+        $this->assertEquals($expired, MathConverter::bytesToGb($bytes, $decimal));
+    }
+
+    public function providerBytesToGb()
+    {
+        return [
+            [
+                1073741824,
+                MathConverter::DEFAULT_DECIMAL,
+                1,
+            ],
+            [
+                0,
+                MathConverter::DEFAULT_DECIMAL,
+                0,
+            ],
+        ];
+    }
 }
