@@ -133,4 +133,40 @@ class TestMathConverter extends TestCase
             ]
         ];
     }
+
+    /**
+     * @param int $gigabyites
+     * @param int $expired
+     *
+     * @dataProvider providerGbToBytes
+     */
+    public function testGbToBytes(?int $gigabyites, int $expired): void
+    {
+        $this->assertEquals($expired, MathConverter::gbToBytes($gigabyites));
+    }
+
+    /**
+     * @return array
+     */
+    public function providerGbToBytes(): array
+    {
+        return [
+            [
+                1,
+                1073741824,
+            ],
+            [
+                0,
+                0,
+            ],
+            [
+                '1',
+                1073741824,
+            ],
+            [
+                null,
+                0,
+            ],
+        ];
+    }
 }
