@@ -18,3 +18,10 @@ echo PHP_EOL;
 // 1 => 1048576
 var_dump(MathConverter::mbToBytes(1));
 echo PHP_EOL;
+
+// Example: megabytes to bytes
+// 1048576 => 1
+var_dump(MathConverter::bytesToMb(1048576));
+// 1000000 => 0.9537
+var_dump(MathConverter::bytesToMb(1000000, 4));
+echo PHP_EOL;
