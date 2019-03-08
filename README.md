@@ -88,6 +88,20 @@ MathConverter::mbToBytes(1);
 // 1048576
 ```
 
+**Convert BYTES TO MEGABYTES**
+
+Example:
+```php
+MathConverter::bytesToMb(1048576);
+// 1
+```
+
+Change decimal:
+```php
+MathConverter::bytesToMb(1000000, 4);
+// 0.9537
+```
+
 
 ## License
 
