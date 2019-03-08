@@ -110,6 +110,21 @@ MathConverter::gbToBytes(1);
 // 1073741824
 ```
 
+**Convert BYTES TO GIGABYTES**
+
+Example:
+```php
+MathConverter::bytesToGb(1073741824);
+// 1
+```
+
+Change decimal:
+```php
+MathConverter::bytesToGb(1000000000, 4);
+// 0.9313
+```
+
+
 ## License
 
 See the [LICENSE.md](https://github.com/cs-eliseev/helpers-math-converter/blob/master/LICENSE.md) file for licensing details.
