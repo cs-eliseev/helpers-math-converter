@@ -68,4 +68,16 @@ class MathConverter
     {
         return round($bytes / pow(1024, 2), $decimal);
     }
+
+    /**
+     * Convert gigabytes to bytes
+     *
+     * @param $gigaBytes
+     *
+     * @return mixed
+     */
+    public static function gbToBytes($gigaBytes)
+    {
+        return $gigaBytes * pow(1024, 3);
+    }
 }
