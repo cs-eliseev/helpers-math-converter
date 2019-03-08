@@ -19,7 +19,7 @@ echo PHP_EOL;
 var_dump(MathConverter::mbToBytes(1));
 echo PHP_EOL;
 
-// Example: megabytes to bytes
+// Example: bytes to megabytes
 // 1048576 => 1
 var_dump(MathConverter::bytesToMb(1048576));
 // 1000000 => 0.9537
@@ -29,4 +29,11 @@ echo PHP_EOL;
 // Example: gigabytes to bytes
 // 1 => 1073741824
 var_dump(MathConverter::gbToBytes(1));
+echo PHP_EOL;
+
+// Example: bytes to megabytes
+// 1073741824 => 1
+var_dump(MathConverter::bytesToGb(1073741824));
+// 1000000000 => 0.9313
+var_dump(MathConverter::bytesToGb(1000000000, 4));
 echo PHP_EOL;
