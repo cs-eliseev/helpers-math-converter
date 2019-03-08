@@ -13,3 +13,8 @@ echo PHP_EOL;
 // HELLO => 48454c4c4f
 var_dump(MathConverter::binToHex('HELLO'));
 echo PHP_EOL;
+
+// Example: megabytes to bytes
+// 1 => 1048576
+var_dump(MathConverter::mbToBytes(1));
+echo PHP_EOL;
