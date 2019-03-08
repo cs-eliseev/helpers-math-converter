@@ -41,4 +41,22 @@ class MathConverter
 
         return $hex;
     }
+
+    /**
+     * Converter bytes to bits
+     *
+     * @param string $bytes
+     * @return string
+     */
+    public static function bytesToBits(string $bytes): string
+    {
+        if ($bytes === '') return '';
+
+        $bits = '';
+        foreach (str_split($bytes, 4) as $chunk) {
+            $bits .= str_pad(base_convert(unpack('H*', $chunk)[1], 16, 2), strlen($chunk) * 8, '0', STR_PAD_LEFT);
+        }
+
+        return $bits;
+    }
 }
