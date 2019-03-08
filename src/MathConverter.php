@@ -80,4 +80,17 @@ class MathConverter
     {
         return $gigaBytes * pow(1024, 3);
     }
+
+    /**
+     * Convert bytes to gigabytes
+     *
+     * @param int $bytes
+     * @param int $decimal
+     *
+     * @return float
+     */
+    public static function bytesToGb(int $bytes, int $decimal = self::DEFAULT_DECIMAL): float
+    {
+        return round($bytes / pow(1024, 3), $decimal);
+    }
 }
