@@ -124,12 +124,26 @@ MathConverter::bytesToGb(1000000000, 4);
 // 0.9313
 ```
 
-**Convert GIGABYTES TO BYTES**
+**Convert GIGABYTES TO MEGABYTES**
 
 Example:
 ```php
 MathConverter::gbToMb(1);
 // 1024
+```
+
+**Convert MEGABYTES TO GIGABYTES**
+
+Example:
+```php
+MathConverter::mbToGb(1024);
+// 1
+```
+
+Change decimal:
+```php
+MathConverter::mbToGb(1000, 4);
+// 0.9766
 ```
 
 
