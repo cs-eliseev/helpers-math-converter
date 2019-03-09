@@ -266,4 +266,48 @@ class TestMathConverter extends TestCase
             ],
         ];
     }
+
+    /**
+     * @param string $value
+     * @param int $expired
+     *
+     * @dataProvider providerToMb
+     */
+    public function testToMb(string $value, int $expired): void
+    {
+        $this->assertEquals($expired, MathConverter::toMb($value));
+    }
+
+    /**
+     * @return array
+     */
+    public function providerToMb(): array
+    {
+        return [
+            [
+                '0.001P',
+                1073741.824,
+            ],
+            [
+                '0.1T',
+                104857.6,
+            ],
+            [
+                '1G',
+                1024,
+            ],
+            [
+                '1M',
+                1,
+            ],
+            [
+                '1000K',
+                0.9765625,
+            ],
+            [
+                '1000000B',
+                0.95367431640625,
+            ],
+        ];
+    }
 }
