@@ -146,6 +146,43 @@ MathConverter::mbToGb(1000, 4);
 // 0.9766
 ```
 
+**Convert TO MEGABYTES**
+
+Example:
+```php
+MathConverter::toMb('1M');
+// 1
+```
+
+Petabyte to megabyte:
+```php
+MathConverter::toMb('0.001P');
+// 1073741.824
+```
+
+Terabyte to megabyte:
+```php
+MathConverter::toMb('0.1T');
+// 104857.6.824
+```
+
+Gigabyte to megabyte:
+```php
+MathConverter::toMb('1G');
+// 1024
+```
+
+Kilobyte to megabyte:
+```php
+MathConverter::toMb('1000K');
+// 0.9765625
+```
+
+Byte to megabyte:
+```php
+MathConverter::toMb('1000000B');
+// 0.95367431640625
+```
 
 ## License
 
