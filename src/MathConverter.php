@@ -171,4 +171,18 @@ class MathConverter
 
         return (float) implode($delimiter, $format);
     }
+
+    /**
+     * Round decimal
+     *
+     * @param $number
+     * @param int $decimal
+     *
+     * @return float
+     */
+    public static function roundDecimal($number, int $decimal = self::DEFAULT_DECIMAL): float
+    {
+        $delimiter = pow(10, $decimal);
+        return round(ceil($number * $delimiter) / $delimiter, $decimal);
+    }
 }
