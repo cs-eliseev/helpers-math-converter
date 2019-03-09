@@ -93,4 +93,16 @@ class MathConverter
     {
         return round($bytes / pow(1024, 3), $decimal);
     }
+
+    /**
+     * Convert gigabytes to megabytes
+     *
+     * @param $gigaBytes
+     *
+     * @return mixed
+     */
+    public static function gbToMb($gigaBytes)
+    {
+        return $gigaBytes * 1024;
+    }
 }
