@@ -198,6 +198,21 @@ MathConverter::cutDecimal('-67.099', 1);
 // -67
 ```
 
+**ROUND DECIMAL**
+
+Example:
+```php
+MathConverter::roundDecimal(11.726);
+// 11.73
+```
+
+Change decimal:
+```php
+MathConverter::roundDecimal('-67.099', 0);
+// -67
+```
+
+
 ## License
 
 See the [LICENSE.md](https://github.com/cs-eliseev/helpers-math-converter/blob/master/LICENSE.md) file for licensing details.
