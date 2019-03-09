@@ -152,4 +152,23 @@ class MathConverter
 
         return $value;
     }
+
+    /**
+     * Cut decimal
+     *
+     * @param $number
+     * @param int $decimal
+     * @param string $delimiter
+     *
+     * @return float
+     */
+    public static function cutDecimal($number, int $decimal = self::DEFAULT_DECIMAL, string $delimiter = '.'): float
+    {
+        $format = explode($delimiter, (string) $number);
+
+        if (empty($format[1]) || $decimal == strlen($format[1])) return (float) $number;
+        $format[1] = substr($format[1], 0, $decimal - strlen($format[1]));
+
+        return (float) implode($delimiter, $format);
+    }
 }
