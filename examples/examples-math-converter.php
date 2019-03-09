@@ -64,3 +64,10 @@ var_dump(MathConverter::toMb('1000K'));
 // 1000000B => 0.95367431640625
 var_dump(MathConverter::toMb('1000000B'));
 echo PHP_EOL;
+
+// Example: gigabytes to megabyte
+// 11.726 => 11.72
+var_dump(MathConverter::cutDecimal(11.726));
+// -67.099 => -67
+var_dump(MathConverter::cutDecimal('-67.099', 1));
+echo PHP_EOL;
