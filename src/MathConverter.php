@@ -105,4 +105,17 @@ class MathConverter
     {
         return $gigaBytes * 1024;
     }
+
+    /**
+     * Convert megabytes to gigabytes
+     *
+     * @param $megaBytes
+     * @param int $decimal
+     *
+     * @return float
+     */
+    public static function mbToGb($megaBytes, int $decimal = self::DEFAULT_DECIMAL): float
+    {
+        return round($megaBytes / 1024, $decimal);
+    }
 }
