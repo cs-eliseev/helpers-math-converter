@@ -37,3 +37,8 @@ var_dump(MathConverter::bytesToGb(1073741824));
 // 1000000000 => 0.9313
 var_dump(MathConverter::bytesToGb(1000000000, 4));
 echo PHP_EOL;
+
+// Example: gigabytes to megabyte
+// 1 => 1024z
+var_dump(MathConverter::gbToMb(1));
+echo PHP_EOL;
