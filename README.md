@@ -184,6 +184,20 @@ MathConverter::toMb('1000000B');
 // 0.95367431640625
 ```
 
+**CUT DECIMAL**
+
+Example:
+```php
+MathConverter::cutDecimal(11.726);
+// 11.72
+```
+
+Change decimal:
+```php
+MathConverter::cutDecimal('-67.099', 1);
+// -67
+```
+
 ## License
 
 See the [LICENSE.md](https://github.com/cs-eliseev/helpers-math-converter/blob/master/LICENSE.md) file for licensing details.
