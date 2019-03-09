@@ -118,4 +118,38 @@ class MathConverter
     {
         return round($megaBytes / 1024, $decimal);
     }
+
+    /**
+     * Convert to megabyte
+     *
+     * @param string $value
+     *
+     * @return float|int|string
+     */
+    public static function toMb(string $value)
+    {
+        $value = trim($value);
+        $units = strtolower($value[strlen($value) - 1]);
+        $value = floatval($value);
+        switch ($units) {
+            case 'p':
+                $value *= pow(1024, 3);
+                break;
+            case 't':
+                $value *= pow(1024, 2);
+                break;
+            case 'g':
+                $value *= 1024;
+                break;
+            case 'm':
+                break;
+            case 'k':
+                $value /= 1024;
+                break;
+            case 'b':
+                $value /= pow(1024, 2);
+        }
+
+        return $value;
+    }
 }
