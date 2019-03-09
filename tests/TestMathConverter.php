@@ -310,4 +310,55 @@ class TestMathConverter extends TestCase
             ],
         ];
     }
+
+    /**
+     * @param $number
+     * @param int $decimal
+     * @param $expected
+     *
+     * @dataProvider providerCutDecimal
+     */
+    public function testCutDecimal($number, int $decimal, $expected): void
+    {
+        $this->assertEquals($expected, MathConverter::cutDecimal($number, $decimal));
+    }
+
+    /**
+     * @return array
+     */
+    public function providerCutDecimal(): array
+    {
+        return [
+            [
+                11.726,
+                MathConverter::DEFAULT_DECIMAL,
+                11.72,
+            ],
+            [
+                67.21,
+                MathConverter::DEFAULT_DECIMAL,
+                67.21,
+            ],
+            [
+                67.2199,
+                MathConverter::DEFAULT_DECIMAL,
+                67.21,
+            ],
+            [
+                67.099,
+                1,
+                67,
+            ],
+            [
+                0,
+                MathConverter::DEFAULT_DECIMAL,
+                0,
+            ],
+            [
+                -1.111111,
+                0,
+                -1,
+            ],
+        ];
+    }
 }
