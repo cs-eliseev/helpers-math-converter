@@ -198,4 +198,36 @@ class TestMathConverter extends TestCase
             ],
         ];
     }
+
+    /**
+     * @param $gigabyte
+     * @param $expired
+     *
+     * @dataProvider providerGbToMb
+     */
+    public function testGbToMb($gigabyte, $expired): void
+    {
+        $this->assertEquals($expired, MathConverter::gbToMb($gigabyte));
+    }
+
+    /**
+     * @return array
+     */
+    public function providerGbToMb(): array
+    {
+        return [
+            [
+                1,
+                1024,
+            ],
+            [
+                0,
+                0,
+            ],
+            [
+                0.5,
+                512,
+            ],
+        ];
+    }
 }
