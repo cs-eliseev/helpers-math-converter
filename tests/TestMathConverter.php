@@ -361,4 +361,40 @@ class TestMathConverter extends TestCase
             ],
         ];
     }
+
+    /**
+     * @param $number
+     * @param int $decimal
+     * @param $expected
+     *
+     * @dataProvider providerRoundDecimal
+     */
+    public function testRoundDecimal($number, int $decimal, $expected): void
+    {
+        $this->assertEquals($expected, MathConverter::roundDecimal($number, $decimal));
+    }
+
+    /**
+     * @return array
+     */
+    public function providerRoundDecimal(): array
+    {
+        return [
+            [
+                11.726,
+                MathConverter::DEFAULT_DECIMAL,
+                11.73,
+            ],
+            [
+                0,
+                MathConverter::DEFAULT_DECIMAL,
+                0,
+            ],
+            [
+                -1.111111,
+                0,
+                -1,
+            ],
+        ];
+    }
 }
