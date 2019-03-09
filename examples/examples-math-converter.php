@@ -43,9 +43,24 @@ echo PHP_EOL;
 var_dump(MathConverter::gbToMb(1));
 echo PHP_EOL;
 
-// Example: bytes to megabytes
+// Example: megabyte to gigabytes
 // 1024 => 1
 var_dump(MathConverter::mbToGb(1024));
 // 1000 => 0.9766
 var_dump(MathConverter::mbToGb(1000, 4));
+echo PHP_EOL;
+
+// Example: megabyte to gigabytes
+// 0.001P => 1073741.824
+var_dump(MathConverter::toMb('0.001P'));
+// 0.1T => 104857.6
+var_dump(MathConverter::toMb('0.1T'));
+// 1G => 1024
+var_dump(MathConverter::toMb('1G'));
+// 1M => 1
+var_dump(MathConverter::toMb('1M'));
+// 1000K => 0.9765625
+var_dump(MathConverter::toMb('1000K'));
+// 1000000B => 0.95367431640625
+var_dump(MathConverter::toMb('1000000B'));
 echo PHP_EOL;
