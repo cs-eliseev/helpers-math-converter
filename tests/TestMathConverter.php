@@ -230,4 +230,40 @@ class TestMathConverter extends TestCase
             ],
         ];
     }
+
+    /**
+     * @param int $megabyte
+     * @param int $decimal
+     * @param $expired
+     *
+     * @dataProvider providerMbToGb
+     */
+    public function testMbToGb(int $megabyte, int $decimal, $expired): void
+    {
+        $this->assertEquals($expired, MathConverter::mbToGb($megabyte, $decimal));
+    }
+
+    /**
+     * @return array
+     */
+    public function providerMbToGb(): array
+    {
+        return [
+            [
+                1024,
+                MathConverter::DEFAULT_DECIMAL,
+                1,
+            ],
+            [
+                0,
+                MathConverter::DEFAULT_DECIMAL,
+                0,
+            ],
+            [
+                1000,
+                4,
+                0.9766,
+            ],
+        ];
+    }
 }
