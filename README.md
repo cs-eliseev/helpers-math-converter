@@ -124,6 +124,14 @@ MathConverter::bytesToGb(1000000000, 4);
 // 0.9313
 ```
 
+**Convert GIGABYTES TO BYTES**
+
+Example:
+```php
+MathConverter::gbToMb(1);
+// 1024
+```
+
 
 ## License
 
