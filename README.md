@@ -5,6 +5,17 @@ A mathematics helpers, providing functionality for numbers converter.
 
 Project repository: https://github.com/cs-eliseev/helpers-math-converter
 
+```php
+$mb = MathConverter::toMb('300K');
+$sub = bcsub(
+    MathConverter::roundDecimal($mb, 4),    // 0.293
+    MathConverter::cutDecimal($mb, 4),      // 0.2929
+    4
+);
+// 0.0001
+MathConverter::binToHex($sub);
+// 302e30303031
+```
 ***
 
 ## Introduction
