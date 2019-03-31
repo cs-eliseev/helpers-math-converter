@@ -1,6 +1,11 @@
 MATH CONVERTER CSE HELPERS
 =======
 
+[![Packagist](https://img.shields.io/packagist/v/cse/helpers-math-converter.svg?style=flat-square)](https://packagist.org/packages/cse/helpers-math-converter)
+[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.1-8892BF.svg?style=flat-square)](https://packagist.org/packages/cse/helpers-math-converter)
+[![Packagist](https://img.shields.io/packagist/l/cse/helpers-math-converter.svg?style=flat-square)](https://github.com/cs-eliseev/helpers-math-converter/blob/master/LICENSE.md)
+[![GitHub repo size](https://img.shields.io/github/repo-size/cs-eliseev/helpers-math-converter.svg?style=flat-square)](https://github.com/cs-eliseev/helpers-math-converter/archive/master.zip)
+
 A mathematics helpers, providing functionality for numbers converter.
 
 Project repository: https://github.com/cs-eliseev/helpers-math-converter
