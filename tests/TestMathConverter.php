@@ -269,11 +269,11 @@ class TestMathConverter extends TestCase
 
     /**
      * @param string $value
-     * @param int $expired
+     * @param $expired
      *
      * @dataProvider providerToMb
      */
-    public function testToMb(string $value, int $expired): void
+    public function testToMb(string $value, $expired): void
     {
         $this->assertEquals($expired, MathConverter::toMb($value));
     }
