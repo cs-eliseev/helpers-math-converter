@@ -101,11 +101,11 @@ class TestMathConverter extends TestCase
     /**
      * @param int $bytes
      * @param int $decimal
-     * @param int $expired
+     * @param $expired
      *
      * @dataProvider providerBytesToMb
      */
-    public function testBytesToMb(int $bytes, int $decimal, int $expired): void
+    public function testBytesToMb(int $bytes, int $decimal, $expired): void
     {
         $this->assertEquals($expired, MathConverter::bytesToMb($bytes, $decimal));
     }
@@ -135,12 +135,12 @@ class TestMathConverter extends TestCase
     }
 
     /**
-     * @param int $gigabyites
+     * @param $gigabyites
      * @param int $expired
      *
      * @dataProvider providerGbToBytes
      */
-    public function testGbToBytes(?int $gigabyites, int $expired): void
+    public function testGbToBytes($gigabyites, int $expired): void
     {
         $this->assertEquals($expired, MathConverter::gbToBytes($gigabyites));
     }
