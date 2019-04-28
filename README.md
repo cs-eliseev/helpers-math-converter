@@ -1,3 +1,5 @@
+English | [Русский](https://github.com/cs-eliseev/helpers-math-converter/blob/master/README.ru_RU.md)
+
 MATH CONVERTER CSE HELPERS
 =======
 
@@ -14,6 +16,7 @@ A mathematics helpers, providing functionality for numbers converter.
 
 Project repository: https://github.com/cs-eliseev/helpers-math-converter
 
+**DEMO**
 ```php
 $mb = MathConverter::toMb('300K');
 $sub = bcsub(
@@ -258,7 +261,7 @@ phpunit --configuration PATH/TO/PROJECT/phpunit.xml
 
 ## License
 
-The CSE HELPERS MATH CONVERTER is open-source PHP library licensed under the MIT license. Please see [License File](https://github.com/cs-eliseev/helpers-math-converter/blob/master/LICENSE.md) for more information.
+The MATH CONVERTER CSE HELPERS is open-source PHP library licensed under the MIT license. Please see [License File](https://github.com/cs-eliseev/helpers-math-converter/blob/master/LICENSE.md) for more information.
 
 ***
 
